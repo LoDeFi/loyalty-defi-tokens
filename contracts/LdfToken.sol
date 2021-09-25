@@ -1,11 +1,11 @@
 // contracts/LdfToken.sol
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.6.0;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract LdfToken is ERC20 {
-    constructor(uint256 initialSupply) ERC20("LoyaltyDefiToken", "LDF") {
+    constructor(uint256 initialSupply) public  ERC20("LoyaltyDefiToken", "LDF") {
         _mint(msg.sender, initialSupply);
 }
 }
