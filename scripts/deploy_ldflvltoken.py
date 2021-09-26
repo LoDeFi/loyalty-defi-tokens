@@ -9,8 +9,3 @@ def main():
     ldfLT = LdfLevelToken.deploy(1, {"from": account})
     tx = ldfLT.createCollectable(sample_token_uri, {"from": account})
     tx.wait(1)
-    # print(OPEN_SEE_URL.format(ldfLT.address, ldfLT.tokenCounter - 1))
-
-
-
-# initial_supply = Web3.toWei(1000, "ether")
