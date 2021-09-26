@@ -4,3 +4,4 @@ build/
 @openzeppelin/
 brownie-config.yaml
 .env
+scripts/__pycache__/
