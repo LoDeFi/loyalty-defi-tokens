@@ -15,7 +15,7 @@ contract LdfExchange {
     constructor() public {
     }
 
-    function getLoyaltyLevel(uint _amount) payable public {
+    function getLoyaltyLevel(uint _amount) internal {
         LdfToken tokenLol = LdfToken(address(0x9E97c0B080Bd5A28b91362863675c5C6c5262b13));
         uint256 dexBalance = tokenLol.balanceOf(address(msg.sender));
         require(_amount <= dexBalance, "Not enough tokens in the reserve");
