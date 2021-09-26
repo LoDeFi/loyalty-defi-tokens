@@ -2,14 +2,16 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.6.0;
 
+
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract LdfLevelToken is ERC721 {
     uint256 public tokenCounter;
+    uint16 public loyaltyLvl;
 
-    constructor() public ERC721("LoyaltyDefiLevelToken", "LDFL") {
+    constructor(uint16 _loyaltyLvl) public ERC721("LoyaltyDefiLevelToken", "LDFL") {
+        loyaltyLvl = _loyaltyLvl;
         tokenCounter = 0;
-        // _mint(msg.sender, initialSupply);
     }
 
     function createCollectable(string memory tokenURI) public returns (uint256) {
